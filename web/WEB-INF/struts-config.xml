@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="Users" type="com.aptech.dto.Users"/>
+        <form-bean name="TourBookings" type="com.aptech.dto.TourBookings"/>
+        <form-bean name="PackageTours" type="com.aptech.dto.PackageTours"/>
+        <form-bean name="PackageTourTypes" type="com.aptech.dto.PackageTourTypes"/>
+        <form-bean name="PackageTourLocations" type="com.aptech.dto.PackageTourLocations"/>
+        <form-bean name="PackageTourHotels" type="com.aptech.dto.PackageTourHotels"/>
+        <form-bean name="PackageTourFoods" type="com.aptech.dto.PackageTourFoods"/>
+        <form-bean name="Locations" type="com.aptech.dto.Locations"/>
+        <form-bean name="Hotels" type="com.aptech.dto.Hotels"/>
+        <form-bean name="Foods" type="com.aptech.dto.Foods"/>
+        <form-bean name="Flights" type="com.aptech.dto.Flights"/>
+        <form-bean name="CarTypes" type="com.aptech.dto.CarTypes"/>
+        <form-bean name="CarBookings" type="com.aptech.dto.CarBookings"/>
+        <form-bean name="Cars" type="com.aptech.dto.Cars"/>
+        <form-bean name="CarModels" type="com.aptech.dto.CarModels"/>
+    
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="Home"  path="/index.jsp"/>
+    </global-forwards>
+    
+    <action-mappings>
+        <action input="/" name="Users" parameter="method" path="/LoginAction" scope="session" type="com.aptech.controller.LoginAction" validate="false">
+            <forward name="admin" path="/admin/index.jsp"/>
+            <forward name="success" path="/HomeAction.do?method=list"/>
+            <forward name="error" path="/home.jsp?option=login"/>
+        </action>
+        <action input="/" name="PackageTourTypes" parameter="method" path="/TourTypeAction" scope="session" type="com.aptech.controller.TourTypeAction" validate="false">
+            <forward name="view" path="/admin/index.jsp?option=tourTypeManage"/>
+        </action>
+        <action input="/" name="Foods" parameter="method" path="/FoodAction" scope="session" type="com.aptech.controller.FoodAction" validate="false">
+            <forward name="view" path="/admin/index.jsp?option=foodManage"/>
+        </action>
+        <action input="/" name="Locations" parameter="method" path="/LocationAction" scope="session" type="com.aptech.controller.LocationAction" validate="false">
+            <forward name="view" path="/admin/index.jsp?option=locationManage"/>
+        </action>
+        <action input="/" name="CarModels" parameter="method" path="/CarModelAction" scope="session" type="com.aptech.controller.CarModelAction" validate="false">
+            <forward name="view" path="/admin/index.jsp?option=carModelManage"/>
+        </action>
+        <action input="/" name="CarTypes" parameter="method" path="/CarTypeAction" scope="session" type="com.aptech.controller.CarTypeAction" validate="false">
+            <forward name="view" path="/admin/index.jsp?option=carTypeManage"/>
+        </action>
+        <action input="/" name="Hotels" parameter="method" path="/HotelAction" scope="session" type="com.aptech.controller.HotelAction" validate="false">
+            <forward name="view" path="/admin/index.jsp?option=hotelManage"/>
+            <forward name="editHotel" path="/admin/index.jsp?option=hotelEdit"/>
+            <forward name="client" path="/home.jsp?option=hotel"/>
+            <forward name="details" path="/home.jsp?option=hotelDetails"/>
+        </action>
+        <action input="/" name="Flights" parameter="method" path="/FlightAction" scope="session" type="com.aptech.controller.FlightAction" validate="false">
+            <forward name="view" path="/admin/index.jsp?option=flightManage"/>
+            <forward name="editFlight" path="/admin/index.jsp?option=flightEdit"/>
+            <forward name="client" path="/home.jsp?option=flight"/>
+        </action>
+        <action input="/" name="Users" parameter="method" path="/UserAction" scope="session" type="com.aptech.controller.UserAction" validate="false">
+            <forward name="view" path="/admin/index.jsp?option=userManage"/>
+            <forward name="edit" path="/admin/index.jsp?option=editUser"/>
+            <forward name="editRole" path="/admin/index.jsp?option=editRole"/>
+            <forward name="success" path="/admin/index.jsp?option=home"/>
+            <forward name="editProfile" path="/home.jsp?option=editProfile"/>
+            <forward name="done" path="/TourAction.do?method=listclient"/>
+            <forward name="error" path="/home.jsp?option=register"/>
+        </action>
+        <action input="/" name="PackageTours" parameter="method" path="/TourAction" scope="session" type="com.aptech.controller.TourAction" validate="false">
+            <forward name="view" path="/admin/index.jsp?option=packageTourManage"/>
+            <forward name="editTour" path="/admin/index.jsp?option=tourEdit"/>
+            <forward name="client" path="/home.jsp?option=packageTour"/>
+            <forward name="details" path="/home.jsp?option=tourDetails"/>
+        </action>
+        <action input="/" name="Cars" parameter="method" path="/CarAction" scope="session" type="com.aptech.controller.CarAction" validate="false">
+            <forward name="view" path="/admin/index.jsp?option=carManage"/>
+            <forward name="editCar" path="/admin/index.jsp?option=carEdit"/>
+            <forward name="client" path="/home.jsp?option=carRental"/>
+            <forward name="details" path="/home.jsp?option=carDetails"/>
+        </action>
+        <action input="/" name="TourBookings" parameter="method" path="/TourBookingAction" scope="session" type="com.aptech.controller.TourBookingAction" validate="false">
+            <forward name="view" path="/admin/index.jsp?option=packageTourBooking"/>
+            <forward name="details" path="/admin/index.jsp?option=tourBookingDetails"/>
+            <forward name="book" path="/home.jsp?option=tourBooking"/>
+            <forward name="bookingBill" path="/home.jsp?option=tourBookingBill"/>
+        </action>
+        <action input="/" name="PackageTours" parameter="method" path="/CartAction" scope="session" type="com.aptech.controller.CartAction" validate="false">
+            <forward name="myCart" path="/home.jsp?option=myCart"/>
+        </action>
+        <action input="/" name="CarBookings" parameter="method" path="/CarBookingAction" scope="session" type="com.aptech.controller.CarBookingAction" validate="false">
+            <forward name="view" path="/admin/index.jsp?option=carBooking"/>
+            <forward name="details" path="/admin/index.jsp?option=carBookingDetails"/>
+            <forward name="book" path="/home.jsp?option=carBooking"/>
+            <forward name="bookingBill" path="/home.jsp?option=carBookingBill"/>
+        </action>
+        <action input="/" name="PackageTours" parameter="method" path="/SearchAction" scope="session" type="com.aptech.controller.SearchAction" validate="false">
+            <forward name="view" path="/home.jsp?option=searchResult"/>
+            <forward name="error" path="/home.jsp?option=searchError"/>
+        </action>
+        <action input="/" name="PackageTours" parameter="method" path="/TourAnalysisAction" scope="session" type="com.aptech.controller.TourAnalysisAction" validate="false">
+            <forward name="view" path="/admin/index.jsp?option=tourAnalysis"/>    
+        </action>
+        <action input="/" name="Cars" parameter="method" path="/CarAnalysisAction" scope="session" type="com.aptech.controller.CarAnalysisAction" validate="false">
+            <forward name="view" path="/admin/index.jsp?option=carAnalysis"/>        
+        </action>
+        <action input="/" name="PackageTours" parameter="method" path="/HomeAction" scope="session" type="com.aptech.controller.HomeAction" validate="false">
+            <forward name="view" path="/home.jsp?option=home"/>        
+        </action>
+                
+        <action path="/Home" forward="/HomeAction.do?method=list" />
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+
+</struts-config>

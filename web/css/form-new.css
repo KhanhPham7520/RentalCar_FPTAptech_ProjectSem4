@@ -1,0 +1,121 @@
+
+fieldset {
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background: #F6F6F6;
+border: 0px solid #ccc;
+padding: 1% 0%;
+margin: 10px 0;
+}
+
+fieldset label {
+display: block;
+float: left;
+width: 150px;
+height: 15px;
+line-height: 25px;
+text-shadow: 0 1px 0 #fff;
+font-weight: bold;
+padding-left: 10px;
+margin: 0px 0 5px 0;
+text-transform: uppercase;
+}
+
+fieldset input[type=text] input[type=password]{
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 0px;
+border: 1px solid #BBBBBB;
+height: 15px;
+color: #666666;
+-webkit-box-shadow: inset 0 2px 2px #ccc, 0 1px 0 #fff;
+-moz-box-shadow: inset 0 2px 2px #ccc, 0 1px 0 #fff;
+box-shadow: inset 0 2px 2px #ccc, 0 1px 0 #fff;
+padding-left: 10px;
+background-position: 10px 6px;
+margin: 0;
+display: block;
+float: left;
+width: 380px;
+}
+fieldset input[type=text]:focus {
+outline: none;
+border: 1px solid #77BACE;
+-webkit-box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
+-moz-box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
+box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
+}
+
+fieldset select {
+width: 260px;
+border: 1px solid #bbb;
+height: 20px;
+color: #666666;
+}
+
+fieldset textarea {
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+border: 1px solid #BBBBBB;
+color: #666666;
+-webkit-box-shadow: inset 0 2px 2px #ccc, 0 1px 0 #fff;
+-moz-box-shadow: inset 0 2px 2px #ccc, 0 1px 0 #fff;
+box-shadow: inset 0 2px 2px #ccc, 0 1px 0 #fff;
+padding-left: 10px;
+background-position: 10px 6px;
+margin: 0 0.5%;
+display: block;
+float: left;
+width: 96%;
+margin: 0 10px;
+}
+
+fieldset textarea:focus {
+outline: none;
+border: 1px solid #77BACE;
+-webkit-box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
+-moz-box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
+box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
+}
+.module header {
+    background: url("../images/secondary_bar.png") repeat-x scroll 0 0 #F1F1F4;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 38px;
+    width: 100%;
+}
+
+.width_full {
+    width: 95%;
+}
+.module {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #9BA0AF;
+    border-radius: 5px 5px 5px 5px;
+    margin: 20px 3% 0;
+    width: 100%;
+}
+input.alt_btn[type="submit"] {
+    background: url("images/btn_submit_2.png") repeat-x scroll 0 0 #D0D1D4;
+    border: 1px solid #30B0C8;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 0 #FFFFFF;
+    color: #003E49;
+    cursor: pointer;
+    font-weight: bold;
+    height: 22px;
+    padding: 0 10px;
+    text-shadow: 0 1px 0 #6CDCF9;
+}
+.submit_link {
+    float: right;
+    margin-right: 42%;
+    padding: 5px 0;
+}
+.module footer {
+    border-bottom: 0 solid #9CA1B0;
+    height: 32px;
+    width: 100%;
+}

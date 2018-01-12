@@ -1,0 +1,170 @@
+/* CSS Document */
+/**********************************Constant**************************************************************************************/
+* {
+    font-size: 1.0em;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+    text-decoration: none;
+}
+
+header h3 {
+    font-size: 1.4em;
+}
+
+form {
+    /*margin-bottom: 1.6em;*/
+    border-width: 0;
+}
+
+fieldset {
+    border: 1px solid #CCCCCC;
+}
+
+form .field {
+    background: url("../images/fieldset.png") no-repeat scroll 0 100% transparent;
+    margin-right: 2px;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+legend {
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+form div {
+    padding-bottom: 1px;
+}
+
+.field label {
+    cursor: pointer;
+    float: left;
+    margin-right: 20px;
+    text-align: right;
+    width: 200px;
+}
+
+input.text, .content textarea {
+        background: -moz-linear-gradient(center top , #F7F7F7 0%, #FFFFFF 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #F0F0F0;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 1px 3px #D8D8D8 inset;
+    color: #D9D9D9;
+    font-size: 15px;
+    font-weight: normal;
+    height: 15px;
+    padding: 5px;
+    text-shadow: -1px -1px 1px #FFFFFF;
+    width: 250px;
+}
+
+
+.required-icon {
+    background: url("../images/input-required.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 20px;
+    margin-left: -20px;
+    overflow: hidden;
+    position: relative;
+    text-indent: -9000px;
+    top: -4px;
+    vertical-align: top;
+    width: 15px;
+}
+
+form div.fieldsetBlock {
+    margin-bottom: 0.8em;
+    margin-right: 10px;
+    padding: 0 0 10px;
+}
+
+
+div.tabs {
+    padding-bottom: 0;
+}
+
+.bBR {
+    background: url("../images/fieldset.png") repeat-y scroll -1790px -20px transparent;
+    bottom: 0;
+    display: block;
+    height: 10px;
+    position: absolute;
+    right: -10px;
+    width: 10px;
+}
+
+form div.fieldsetBlock fieldset {
+    background: url("../images/fieldset.png") repeat-y scroll right top transparent;
+    border: medium none;
+    margin: 0 -12px 0 0;
+    padding: 10px 0 0;
+}
+
+form .field {
+    border-bottom: 0px solid #E0E0E0;
+    border-top: 0px solid #FFFFFF;
+    padding: 10px;
+    
+}
+
+form div.fieldsetBlock legend {
+    display: none;
+}
+
+#fieldset1 .buttom_form {
+    background: -moz-linear-gradient(center top , #A4B357 0%, #85C329 100%) repeat scroll 0 0 transparent;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: normal;
+    text-shadow: 3px -1px 1px #4B4B4B;
+    width: 80px;
+    height: 35px;
+}
+
+#fieldset1 .buttom_form:hover {
+    color: #000;
+}
+
+#buttom1{
+    margin-left: 230px;
+}
+
+#fieldset1 input{
+    background: -moz-linear-gradient(center top , #F7F7F7 0%, #FFFFFF 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #F0F0F0;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 1px 1px #D8D8D8 inset;
+    color: #000;
+    font-size: 15px;
+    font-weight: normal;
+    height: 15px;
+    padding: 5px;
+    text-shadow: -1px -1px 1px #FFFFFF;
+    width: 190px;
+}
+#fieldset1 label{
+    color: #000;
+    font-size: 15px;
+    font-weight: normal;
+    height: 15px;
+    padding: 5px;
+    text-shadow: -1px -1px 1px #FFFFFF;
+    width: 190px;
+}
+
+#infoDetails {
+    font-size: 12px;
+    text-align: justify;
+    padding-left: 25px;
+    padding-top: 5px;
+}
+
+#infoDetails2 {
+    font-size: 12px;
+    text-align: justify;
+    margin-top: 20px;
+    margin-left: 235px;
+}
